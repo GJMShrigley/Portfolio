@@ -97,7 +97,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="profile__info profile__info--large">
+          <div className="profile__info">
             <h1 className="profile__heading">SKILLS</h1>
           </div>
         </div>
