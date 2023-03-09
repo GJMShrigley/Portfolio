@@ -1,0 +1,918 @@
+  /* TOP-LEVEL START */
+
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1rem;
+    text-align: left;
+    font-family: "Titillium Web", sans-serif;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ddd;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.7rem;
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 1);
+    border-radius: 8px;
+  }
+
+  /* TOP-LEVEL END */
+  
+  /* NAVIGATION START */
+
+  .menu {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #aaa;
+    background: rgba(100, 100, 100, 0.3);
+    backdrop-filter: blur(5px);
+    animation: slideUp 1s ease-in-out;
+    z-index: 10;
+  }
+
+  .menu__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #666;
+  }
+
+  .menu__link:hover {
+    font-weight: 700;
+    color: #fff;
+    background-color: #c00;
+    cursor: pointer;
+  }
+
+  /* NAVIGATION END */
+
+  /* GENERAL START */
+
+  .front-page,
+  .about-page,
+  .portfolio-page,
+  .contact-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: #ddd;
+  }
+
+  .about-page,
+  .portfolio-page {
+    animation: slideLeft 0.4s ease-out;
+  }
+
+  .page-header {
+    position: relative;
+    top: 4%;
+    height: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    line-height: 1.5rem;
+    color: #666;
+    animation: slideLeft 0.4s linear;
+  }
+
+  .profile,
+  .portfolio,
+  .contact {
+    position: absolute;
+    top: 11vh;
+    max-height: 80vh;
+    min-height: 70vh;
+    grid-gap: 0.5rem;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .profile,
+  .contact {
+    width: 90vw;
+    display: flex;
+    overflow: visible;
+  }
+
+  .profile__skills,
+  .profile__bio,
+  .profile__technologies,
+  .profile__links,
+  .portfolio__project {
+    box-shadow: 1px 5px 10px 1px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 0.5rem;
+    text-decoration: none;
+    background: rgba(100, 100, 100, 0.8);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    transition: 0.2s linear;
+    z-index: 1;
+  }
+
+  /* GENERAL END*/
+
+  /* FRONT-PAGE START */
+
+  .front-page {
+    justify-content: center;
+  }
+
+  .home {
+    position: relative;
+    top: -5vh;
+    border: solid 8px #666;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 4s linear;
+    cursor: default;
+  }
+
+  .home__name {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: 0.2rem;
+    color: #666;
+  }
+
+  .home__title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.6rem;
+    color: #666;
+  }
+
+  /* FRONT-PAGE END */
+
+  /* ABOUT-PAGE START */
+
+  .profile__large,
+  .profile__small {
+    width: 71vh;
+    height: 71vh;
+    max-width: 45vw;
+    max-height: 45vw;
+    overflow: visible;
+  }
+
+  .profile__small {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "bio links"
+      "technologies null";
+    grid-gap: 1vh;
+  }
+
+  .profile__skills {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .profile__bio,
+  .profile__links,
+  .profile__technologies {
+    width: 35vh;
+    height: 35vh;
+    max-width: 22vw;
+    max-height: 22vw;
+  }
+
+  .profile__bio {
+    grid-area: bio;
+  }
+
+  .profile__links {
+    grid-area: links;
+  }
+
+  .profile__technologies {
+    grid-area: technologies;
+  }
+
+  .profile__info,
+  .portfolio__info {
+    align-items: flex-end;
+    border: solid 2px #fff;
+    width: 100%;
+    height: 5vh;
+    min-height: 1.5rem;
+    background-color: #fff;
+    padding-left: 2%;
+  }
+
+  .profile__heading,
+  .portfolio__heading {
+    font-size: 0.9rem;
+    color: #000;
+  }
+
+  .profile__links-contents,
+  .profile__skills-contents {
+    position: relative;
+    top: 0;
+    padding: 1vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .profile__skills-contents {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile__links-contents {
+    width: 34vh;
+    height: 34vh;
+  }
+
+  .profile__skills-item,
+  .profile__links-item {
+    position: relative;
+    min-width: 70%;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile__skills-item {
+    width: 25vh;
+    height: 25vh;
+  }
+
+  .profile__links-item {
+    width: 12vh;
+    height: 12vh;
+  }
+
+  .profile__inner-box {
+    position: relative;
+    top: 0;
+    box-shadow: 3px 3px 5px 1px #000;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c00;
+  }
+
+  .profile__icon {
+    width: 80%;
+    height: 80%;
+  }
+
+  .profile__bio-contents,
+  .profile__tech svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile__list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0.5vw 0.5vw 1.5vw 1vw;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1vw;
+  }
+
+  .profile__tech {
+    width: 100%;
+    height: 120%;
+    display: flex;
+  }
+
+  .profile__item-heading,
+  .profile__text,
+  .profile__tech h2,
+  .profile__concept-list,
+  .profile__bio-right,
+  .profile__bio-summary,
+  .profile__bio-about,
+  .profile__bio-info {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  .profile__concept-list,
+  .profile__concept {
+    margin: 0 1rem 1rem 1rem;
+    transition: all 0.2s ease-in;
+  }
+
+  .profile__concept-list {
+    border-top: solid 1px #999;
+  }
+
+  .profile__img {
+    position: relative;
+    left: 0;
+    width: 35vh;
+    height: auto;
+  }
+
+  .active {
+    position: absolute;
+    left: 0;
+    min-width: 91vw;
+    max-width: 100vw;
+    min-height: 73vh;
+    /* max-height: 50vh; */
+    background: rgba(30, 30, 30, 0.9);
+    z-index: 3;
+  }
+
+  /* -- ABOUT PAGE MODIFIERS-- */
+
+  .profile__links:hover {
+    width: 36vh;
+    height: 36vh;
+    max-width: 23vw;
+    max-height: 23vw;
+    z-index: 2;
+  }
+
+  .profile__links:hover .profile__info,
+  .active .profile__info,
+  .portfolio__project:hover > .portfolio__info {
+    border: solid 2px #c00;
+    background-color: #c00;
+    z-index: 3;
+  }
+
+  .profile__links:hover .profile__heading,
+  .active .profile__heading,
+  .portfolio__project:hover .portfolio__heading {
+    color: #fff;
+    z-index: 3;
+  }
+
+  .active .profile__skills-contents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .active .profile__bio-right,
+  .active .profile__skills-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .active .profile__skills-item {
+    flex-direction: row;
+  }
+
+  .active .profile__inner-box {
+    margin-right: 2%;
+    width: 20%;
+    height: 80%;
+  }
+
+  .active .profile__item-heading {
+    margin-right: 1%;
+    width: 100%;
+    height: 50%;
+    display: block;
+    font-size: 0.8rem;
+    line-height: 100%;
+    color: #fff;
+  }
+
+  .active .profile__text {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 0.7rem;
+    color: #fff;
+    overflow-y: auto;
+    animation: expandTextHeight 2.7s forwards;
+  }
+
+  .active .profile__bio-contents {
+    display: flex;
+  }
+
+  .active .profile__bio-left {
+    margin-right: 2%;
+    width: 55%;
+  }
+
+  .active .profile__bio-right {
+    flex-direction: column;
+  }
+
+  .active .profile__img {
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 55%;
+  }
+
+  .active .profile__bio-info,
+  .active .profile__bio-summary,
+  .active .profile__bio-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .active .profile__bio-summary {
+    grid-area: summary;
+    height: 45%;
+  }
+
+  .active .profile__bio-info {
+    grid-area: info;
+    margin-left: 0.4rem;
+    height: 50%;
+  }
+
+  .active .profile__bio-label {
+    height: 2.5rem;
+    color: #fff;
+  }
+
+  .active .profile__text-box {
+    border-top: solid 1px #999;
+    animation: expandTextWidth 1s forwards, expandTextHeight 2.7s forwards;
+  }
+
+  .active .profile__bio-about {
+    grid-area: text;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 53%;
+  }
+
+  .active .profile__sub-heading {
+    padding-bottom: 0.5rem;
+  }
+
+  .profile__bio-about .profile__text {
+    overflow-y: auto;
+  }
+
+  .active .profile__section-heading {
+    margin-top: 0.2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .active .profile__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .active .profile__tech {
+    margin: 1rem 0 0 0.5rem;
+    width: 100%;
+    font-size: 0.8rem;
+    overflow: visible;
+  }
+
+  .active .profile__tech svg {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .active .profile__tech h2 {
+    width: 100%;
+    height: 100%;
+    display: contents;
+  }
+
+  .active .profile__concept-list {
+    margin: 0 0 0 0.5rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    animation: expandItemWidth 1s forwards, expandItemHeight 4s forwards;
+  }
+
+  .active .profile__concept {
+    position: relative;
+    top: 1rem;
+    width: 90%;
+    padding: 0.2rem 0;
+    font-size: 0.7rem;
+    list-style: square inside none;
+    color: #fff;
+    overflow-y: hidden;
+  }
+
+  /* ABOUT-PAGE END */
+
+  /* PORTFOLIO-PAGE START */
+
+  .portfolio {
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .portfolio__project {
+    width: 35vh;
+    height: 35vh;
+    max-width: 22vw;
+    max-height: 22vw;
+  }
+
+  .portfolio__info {
+    border: solid 2px #fff;
+    width: 100%;
+    height: 5vh;
+    min-height: 1.5rem;
+    background-color: #fff;
+    padding-left: 2%;
+  }
+
+  .portfolio__text {
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    color: #000;
+    display: none;
+  }
+
+  .portfolio__project:hover {
+    position: relative;
+    top: -1rem;
+    animation: 0.1s linear grow forwards;
+    z-index: 2;
+  }
+
+  .portfolio__project:hover .portfolio__text {
+    display: contents;
+    color: #fff;
+  }
+
+  /* PORTFOLIO-PAGE END */
+
+  /* CONTACT-PAGE START */
+
+  .contact-page {
+    animation: slideLeft 0.4s ease-out;
+  }
+
+  .contact__label {
+    font-size: 1.1rem;
+    color: #666;
+  }
+
+  .contact__form {
+    position: relative;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  .contact__input,
+  .contact__text {
+    border: 1px solid transparent;
+    color: #000;
+    background: rgba(100, 100, 100, 0.5);
+    backdrop-filter: blur(5px);
+  }
+
+  .contact__input {
+    margin: 1vh 0;
+    height: 5vh;
+    padding: 0 0 0 0.5rem;
+  }
+
+  .contact__text {
+    margin: 1vh 0;
+    height: 30vh;
+    padding: 0.2rem 0 0 0.5rem;
+    resize: none;
+  }
+
+  .contact__submit {
+    margin: 1% 0;
+    width: 5.5rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  .contact__submit:hover {
+    border: solid 2px #fff;
+    color: #fff;
+    background-color: #c00;
+  }
+
+  /* CONTACT-PAGE END */
+
+  /* ICONS & IMAGES START */
+
+  .portfolio__image-1 {
+    background-image: url("../public/images/javasynth.png");
+  }
+
+  .portfolio__image-2 {
+    background-image: url("../public/images/memorygame.png");
+  }
+
+  .portfolio__image-3 {
+    background-image: url("../public/images/noteapp.png");
+  }
+
+  .portfolio__image-4 {
+    background-image: url("../public/images/spotifyplayer.png");
+  }
+
+  .portfolio__image-5 {
+    background-image: url("../public/images/productpage.png");
+  }
+
+  .portfolio__image-6 {
+    background-image: url("../public/images/randomuser.png");
+  }
+
+@media (orientation: portrait) {
+
+  /* NAVIGATION START */
+
+  .menu__link {
+    font-size: 1rem;
+  }
+
+  /* NAVIGATION END */
+
+  /* GENERAL START */
+
+  .profile, 
+  .portfolio,
+  .contact {
+    top: 4rem;
+    flex-direction: column;
+    width: 100vw;
+    height: 77vh;
+  }
+
+  /* GENERAL END */
+
+  /* FRONT-PAGE START */
+
+  .home {
+    width: 90%;
+  }
+
+  .home__name {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .home__title {
+    font-size: .7rem;
+    letter-spacing: 0.4rem;
+  }
+
+  /* FRONT-PAGE END */
+
+  /* ABOUT-PAGE START */
+
+  .profile__large,
+  .profile__small {
+    width: 62vh;
+    height: 62vh;
+    max-width: 77vw;
+    max-height: 77vw;
+  }
+
+  .profile__small {
+    display: grid;
+  }
+
+  .profile__bio,
+  .profile__links,
+  .profile__technologies {
+    width: 35vh;
+    height: 35vh;
+    max-width: 24vw;
+    max-height: 29vw;
+  }
+
+  .profile__skills-contents {
+    width: 90%;
+    height: 90%;
+  }
+
+  .profile__skills-item {
+    width: 15vh;
+    height: 15vh;
+  }
+
+  .profile__inner-box {
+    width: 80%;
+    height: 80%;
+  }
+
+  .profile__small {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "bio technologies links";
+    grid-gap: 1vh;
+  }
+
+  .profile__img {
+    width: 16vh;
+  }
+
+  .profile__links-contents {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile__links-item {
+    width: 100%;
+    height: 100%;
+  }
+
+  .active {
+    position: fixed;
+    top: 10vh;
+    left: 1vw;
+    min-width: 98vw;
+    max-width: 98vw;
+    min-height: 70vh;
+    max-height: 73vh;
+  }
+
+  /* -- ABOUT PAGE MODIFIERS-- */
+
+  .active .profile__skills-item {
+    height: 20vh;
+  }
+
+  .active .profile__inner-box {
+    width: 30vw;
+    height: 15vw;
+  }
+
+  .active .profile__bio-left {
+    height: 40vh;
+  }
+
+  .active .profile__img {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile__links:hover {
+    max-width: 32vw;
+    max-height: 32vw;
+  }
+
+}
+/* ANIMATIONS */
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(130%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(120%);
+  }
+}
+
+@keyframes expandItemWidth {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 0;
+  }
+  100% {
+    width: 96%;
+  }
+}
+
+@keyframes expandItemHeight {
+  0% {
+    height: 0;
+  }
+  20% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes expandTextWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 96%;
+  }
+}
+
+@keyframes expandTextHeight {
+  0% {
+    height: 0;
+  }
+  35% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}

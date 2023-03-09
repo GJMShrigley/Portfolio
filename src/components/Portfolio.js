@@ -2,51 +2,49 @@ export default function Portfolio() {
   return (
     <div className="portfolio-page">
       <h1 className="page-header">PORTFOLIO</h1>
-      <div className="portfolio">
-        <a className="portfolio__project portfolio__image-1">
-          <div className="portfolio__info">
-            <h2 className="portfolio__heading">JavaSynth</h2>
-            <p className="portfolio__text">
-              A Javascript-based electronic synth
-            </p>
+      <div className="container">
+      <div className="box project">
+          <div className="box-contents"></div>
+          <div className="box-label">
+            <div className="box-heading">JAVASYNTH</div>
+            <div className="project-text">A Javascript-based electronic synth</div>
           </div>
-        </a>
-        <a className="portfolio__project portfolio__image-2">
-          <div className="portfolio__info">
-            <h2 className="portfolio__heading">Memory Game</h2>
-            <p className="portfolio__text">A Javascript-based memory game</p>
+        </div>
+        <div className="box project">
+          <div className="box-contents"></div>
+          <div className="box-label">
+            <div className="box-heading">MEMORY GAME</div>
+            <div className="project-text">A Javascript-based memory game</div>
           </div>
-        </a>
-        <a className="portfolio__project portfolio__image-3">
-          <div className="portfolio__info">
-            <h2 className="portfolio__heading">To-Do List</h2>
-            <p className="portfolio__text">A React-based drag and drop list</p>
+        </div>
+        <div className="box project">
+          <div className="box-contents"></div>
+          <div className="box-label">
+            <div className="box-heading">TO-DO APP</div>
+            <div className="project-text">A React-based drag and drop list</div>
           </div>
-        </a>
-        <a className="portfolio__project portfolio__image-4">
-          <div className="portfolio__info">
-            <h2 className="portfolio__heading">Spotify Player</h2>
-            <p className="portfolio__text">
-              A React-based Spotify player with built-in search
-            </p>
+        </div>
+        <div className="box project">
+          <div className="box-contents"></div>
+          <div className="box-label">
+            <div className="box-heading">SPOTIFY PLAYER</div>
+            <div className="project-text"> A React-based Spotify player with built-in search</div>
           </div>
-        </a>
-        <a className="portfolio__project portfolio__image-5">
-          <div className="portfolio__info">
-            <h2 className="portfolio__heading">Landing Page</h2>
-            <p className="portfolio__text">
-              An HTML, CSS, and Javascript-based landing page
-            </p>
+        </div>
+        <div className="box project">
+          <div className="box-contents"></div>
+          <div className="box-label">
+            <div className="box-heading">LANDING PAGE</div>
+            <div className="project-text">An HTML, CSS, and Javascript-based landing page</div>
           </div>
-        </a>
-        <a className="portfolio__project portfolio__image-6">
-          <div className="portfolio__info">
-            <h2 className="portfolio__heading">User List</h2>
-            <p className="portfolio__text">
-              A React-based profile viewer using the Random User API
-            </p>
+        </div>
+        <div className="box project">
+          <div className="box-contents"></div>
+          <div className="box-label">
+            <div className="box-heading">USER LIST</div>
+            <div className="project-text">A React-based profile viewer using the Random User API</div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   );
