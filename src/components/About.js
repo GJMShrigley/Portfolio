@@ -188,55 +188,55 @@ export default function About() {
             <div className="box-contents">
               <div className="box-list">
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
-                      {" "}
                       <IconHtml5 />
                     </div>
                     <div className="list-item__heading">HTML</div>
                   </div>
-                  <li className="list-item__text">
-                    Skilled in the use of Semantic markup in building web pages
-                  </li>
-                  <li className="list-item__text">
-                    {" "}
-                    Well-versed in BEM methodology conventions
-                  </li>
+                    <li className="list-item__text">
+                      Skilled in the use of Semantic markup in building web
+                      pages
+                    </li>
+                    <li className="list-item__text">
+                      Well-versed in BEM methodology conventions
+                    </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconCss3 />
                     </div>
                     <div className="list-item__heading">CSS</div>
                   </div>
-                  <li className="list-item__text">
-                    Experienced at Responsive and Mobile-first design to create
-                    dynamic web content across all device types
-                  </li>
+                    <li className="list-item__text">
+                      Experienced at Responsive and Mobile-first design to
+                      create dynamic web content across all device types
+                    </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconLogoJavascript />
                     </div>
                     <div className="list-item__heading">JAVASCRIPT</div>
                   </div>
-                  <li className="list-item__text">
-                    Experienced at DOM manipulation using Javascript
-                  </li>
-                  <li className="list-item__text">
-                    Thorough understanding of Scope, Prototypes and Inheritance,
-                    Bubbling and Capturing, Type coercion, Polymorphism,
-                    Encapsulation, and Hoisting
-                  </li>
-                  <li className="list-item__text">
-                    Adept at using Asynchronous methods and Callback functions,
-                    and Destructuring to create clean and efficient code
-                  </li>
+                    <li className="list-item__text">
+                      Experienced at DOM manipulation using Javascript
+                    </li>
+                    <li className="list-item__text">
+                      Thorough understanding of Scope, Prototypes and
+                      Inheritance, Bubbling and Capturing, Type coercion,
+                      Polymorphism, Encapsulation, and Hoisting
+                    </li>
+                    <li className="list-item__text">
+                      Adept at using Asynchronous methods and Callback
+                      functions, and Destructuring to create clean and efficient
+                      code
+                    </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconReact />
                     </div>
@@ -251,7 +251,7 @@ export default function About() {
                   </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconLanguagePhp />
                     </div>
@@ -263,20 +263,19 @@ export default function About() {
                   </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconBootstrap />
                     </div>
                     <div className="list-item__heading">BOOTSTRAP</div>
                   </div>
                   <li className="list-item__text">
-                    {" "}
                     Familiar with the syntax and functionality of the Bootstrap
                     CSS library
                   </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconJquery />
                     </div>
@@ -288,7 +287,7 @@ export default function About() {
                   </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconNodejs />
                     </div>
@@ -300,7 +299,7 @@ export default function About() {
                   </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconJson />
                     </div>
@@ -312,7 +311,7 @@ export default function About() {
                   </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconApi />
                     </div>
@@ -324,7 +323,7 @@ export default function About() {
                   </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconGithub />
                     </div>
@@ -338,7 +337,7 @@ export default function About() {
                   </li>
                 </ul>
                 <ul className="list-item">
-                  <div className="list-item__wrapper">
+                  <div className="list-item__label">
                     <div className="list-item__icon">
                       <IconNetlify />
                     </div>
@@ -361,7 +360,7 @@ export default function About() {
               <div className="grid-item">
                 <a className="icon-box" href="https://github.com/GJMShrigley">
                   <img
-                    className="profile__icon"
+                    className="icon"
                     alt="Github icon"
                     src="./icons/github-white.svg"
                   ></img>
@@ -373,7 +372,7 @@ export default function About() {
                   href="https://www.linkedin.com/in/gjmshrigley"
                 >
                   <img
-                    className="profile__icon"
+                    className="icon"
                     alt="Linkedin icon"
                     src="./icons/linkedin-white.svg"
                   ></img>
@@ -382,7 +381,7 @@ export default function About() {
               <div className="grid-item">
                 <a className="icon-box" href="mailto: gjmshrigley@gmail.com">
                   <img
-                    className="profile__icon"
+                    className="icon"
                     alt="Email icon"
                     src="./icons/mail-white.svg"
                   ></img>

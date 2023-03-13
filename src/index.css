@@ -14,13 +14,11 @@
 
 html {
   width: 100vw;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   background-color: #ddd;
-  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -59,7 +57,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: .9rem;
   color: #666;
 }
 
@@ -178,7 +176,7 @@ body {
 }
 
 .box-heading {
-  font-size: .9rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #000;
 }
@@ -195,10 +193,13 @@ body {
   position: relative;
   top: -5vh;
   border: solid 8px #666;
-  width: 95vw;
+  /* width: 95vw; */
+  width: auto;
+  padding: 0 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
   animation: fadeIn 4s linear;
   cursor: default;
 }
@@ -266,6 +267,7 @@ body {
 
 .icon {
   width: 80%;
+  height: 80%;
 }
 
 .box-contents__right,
@@ -301,23 +303,17 @@ body {
   width: 16vh;
   max-width: 31vw;
   height: 16vh;
+  max-height: 31vw;
 }
 
-.list-item {
-  width: 1rem;
-  height: 1rem;
-}
-
-.list-item__wrapper {
-  width: 1rem;
-  height: 1rem;
-  display: flex;
-  align-items: flex-start;
-}
-
+.list-item,
+.list-item__label,
 .list-item__icon {
   width: 1rem;
   height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .list-item svg {
@@ -363,7 +359,8 @@ body {
 
 .active .box-contents__left {
   width: 100%;
-  height: 65%;
+  height: 50%;
+  max-height: 65%;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -438,6 +435,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  align-items: center;
   font-size: .7rem;
 }
 
@@ -448,25 +446,30 @@ body {
 }
 
 .active .box-list {
+  position: relative;
+  left: 1%;
+  width: 98%;
   height: auto;
   display: flex;
   flex-direction: column;
 }
 
 .active .list-item {
+  margin-bottom: 2vh;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   list-style: square inside none;
 }
 
-.active .list-item__wrapper {
+.active .list-item__label {
   margin: .2rem 0;
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
   justify-items: center;
 }
 
@@ -480,6 +483,7 @@ body {
   width: 100%;
   height: 100%;
   display: contents;
+  font-weight: 700;
 }
 
 .active .list-item__text {
@@ -490,6 +494,16 @@ body {
   display: list-item;
   font-size: .7rem;
   list-style: square inside none;
+}
+
+.body-text,
+.contents-text,
+.active .list-item__text {
+  animation: textWidth .7s linear forwards, textHeight 3.2s linear forwards;
+}
+
+.active .list-item__text {
+  animation: textWidth .7s linear forwards, listHeight 3.2s linear forwards;
 }
 
 /* ABOUT-PAGE END */
@@ -510,18 +524,28 @@ body {
 
 .project:hover {
   width: 150%;
+  max-width: 50vw;
   height: 150%;
-  z-index: 2;
+  max-height: 50vw;
+  z-index: 11;
 }
 
 .project:hover .box-label {
-  height: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.project:hover .box-heading {
+  display: none;
 }
 
 .project:hover .project-text {
-  width: 100%;
+  width:fit-content;
   height: 100%;
-  display: contents;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 /* PORTFOLIO PAGE END */
@@ -539,6 +563,7 @@ body {
 .form-label {
   margin-left: 0.2rem;
   font-size: 1.1rem;
+  color: #666;
 }
 
 .form {
@@ -586,7 +611,7 @@ body {
 
 /* CONTACT-PAGE END */
 
-/* ANIMATIONS */
+/* ANIMATIONS START */
 
 @keyframes slideUp {
   0% {
@@ -608,3 +633,223 @@ body {
     opacity: 100%;
   }
 }
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes itemWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes itemHeight {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 0;
+  }
+  100% {
+    height: 1rem;
+  }
+}
+
+@keyframes textWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes textHeight {
+  0% {
+    max-height: 0;
+  }
+  25% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
+
+@keyframes listHeight {
+  0% {
+    max-height: 0;
+  }
+  25% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 10rem;
+  }
+}
+
+/* ANIMATIONS END */
+
+/* MEDIA QUERIES START */
+
+@media (orientation: landscape) {
+  
+  .title {
+    width: auto;
+  }
+
+  .container {
+    top: 14vh;
+    width: 84vw;
+    max-width: 150vh;
+    height: 69vh;
+    flex-direction: row;
+    grid-gap: .2rem;
+  }
+
+  .element-single,
+  .element-group {
+    height: 69vh;
+    max-height: 90%;
+  }
+
+  .skills {
+    height: 100%;
+  }
+
+  .bio {
+  object-fit: cover;
+  }
+
+  .element-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "bio tech"
+    "links null";
+    grid-row-gap: .4rem;
+    grid-column-gap: .1rem;
+  }
+
+  .icon-box {
+    max-height: 17vh;
+  }
+
+  .box-contents__left {
+    width: 35vh;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 20vw;
+    height: auto;
+    max-height: 20vw;
+  }
+
+  .active {
+    top: 14vh;
+    height: 70vh;
+  }
+
+  .active .icon-box {
+    width: 20%;
+    heighT: auto;
+  }
+
+  .active .box-contents__left {
+    height: 100%;
+    max-height: 60vh;
+  }
+
+  .active .text-wrapper {
+    height: 50vh;
+  }
+
+  .active .sub-heading,
+  .active .body-text {
+    height: 30vh;
+  }
+
+  .portfolio-page .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-height: 500px) {
+
+  .box-heading {
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .active .grid-text,
+  .active .body-text,
+  .active .contents-text,
+  .active .list-item__text,
+  .project-text,
+  .form-label {
+    font-size: .9rem;
+    line-height: 1.1rem;
+  }
+
+  .list-item,
+  .list-item__label,
+  .list-item__icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .list-item svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+@media (max-width: 310px) {
+
+  .menu__link {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 310px) {
+
+  .box-heading {
+    line-height: 2rem;
+    font-size: 1.3rem;
+  }
+
+}
+
+@media (min-width: 400px) {
+
+  .menu__link {
+    font-size: 1.3rem;
+  }
+
+}
+
+@media (min-width: 600px) {
+
+  .menu__link {
+    font-size: 2rem;
+  }
+  
+}
+
+
+/* MEDIA QUERIES END */
