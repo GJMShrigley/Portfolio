@@ -270,7 +270,7 @@ body {
   height: 80%;
 }
 
-.box-contents__right,
+.box-contents__bottom,
 .text-wrapper,
 .grid-heading,
 .grid-text,
@@ -294,7 +294,7 @@ body {
   justify-items: center;
 }
 
-.box-contents__left {
+.box-contents__top {
   width: 100%;
   height: 100%;
 }
@@ -309,16 +309,16 @@ body {
 .list-item,
 .list-item__label,
 .list-item__icon {
-  width: 1rem;
-  height: 1rem;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .list-item svg {
-  width: .7rem;
-  height: .7rem;
+  width: 90%;
+  height: 90%;
 }
 
 .active {
@@ -353,51 +353,55 @@ body {
 }
 
 .active .box-contents--flex {
-  display: flex;
+  display: grid;
+  flex-direction: column;
+  grid-template-rows: 1fr 3fr ;
   grid-gap: .2rem;
 }
 
-.active .box-contents__left {
-  width: 100%;
-  height: 50%;
-  max-height: 65%;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
-.active .box-contents__right {
+.active .box-contents__top {
   width: 100%;
   height: 100%;
   display: flex;
-  flex: 2;
+}
+
+.active .box-contents__bottom {
+  width: 100%;
+  height: 100%;
+  display: flex;
   flex-direction: column;
 }
 
 .active .image {
   width: 100%;
   height: auto;
+  max-width: 17vh;
+  max-height: 17vh;
 }
 
 .active .text-wrapper {
+  height: 100%;
   width: 100%;
+  padding: 0 0 0 .5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .active .contents-heading {
-  margin-top: .5rem;
   min-height: 1.5rem;
   display: flex;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   align-items:center;
   color: #fff;
 }
 
 .active .contents-text {
-  font-size: .7rem;
+  height: 100%;
+  padding-top: .2rem;
+  font-size: .9rem;
+  line-height: 1.3rem;
   overflow-y: auto;
 }
 
@@ -492,14 +496,15 @@ body {
   height: 100%;
   padding-left: .5rem;
   display: list-item;
-  font-size: .7rem;
+  font-size: 1rem;
+  line-height: 1.3rem;
   list-style: square inside none;
 }
 
-.body-text,
-.contents-text,
+.active .body-text,
+.active .contents-text,
 .active .list-item__text {
-  animation: textWidth .7s linear forwards, textHeight 3.2s linear forwards;
+  animation: textWidth .7s linear forwards, textHeight 2s linear forwards;
 }
 
 .active .list-item__text {
@@ -677,7 +682,7 @@ body {
   0% {
     max-height: 0;
   }
-  25% {
+  40% {
     max-height: 0;
   }
   100% {
@@ -722,12 +727,17 @@ body {
     max-height: 90%;
   }
 
+  .box-label {
+    height: 30%;
+    max-height: 3rem;
+  }
+
   .skills {
     height: 100%;
   }
 
   .bio {
-  object-fit: cover;
+    object-fit: cover;
   }
 
   .element-group {
@@ -742,11 +752,10 @@ body {
   }
 
   .icon-box {
-    max-height: 17vh;
-  }
-
-  .box-contents__left {
-    width: 35vh;
+    width: 50%;
+    height: 70%;
+    max-width: 15vh;
+    max-height: 15vh;
   }
 
   .image {
@@ -763,12 +772,20 @@ body {
 
   .active .icon-box {
     width: 20%;
-    heighT: auto;
+    height: auto;
+    max-width: 10vh;
+    max-height: 10vh;
   }
 
-  .active .box-contents__left {
+  .active .box-contents__top {
+    min-height: 20vh;
+  }
+
+  .active .image {
+    width: auto;
+    max-width: 10vw;
     height: 100%;
-    max-height: 60vh;
+    max-height: 10vw;
   }
 
   .active .text-wrapper {
@@ -783,70 +800,84 @@ body {
   .portfolio-page .container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .project {
+    width: 99%;
+    height: 99%;
+  }
 }
 
-@media (min-height: 500px) {
+@media (orientation: portrait) and (min-height: 1000px) {
+  
+  .menu__link {
+    font-size: 2.5rem;
+  }
 
   .box-heading {
+    font-size: 2rem;
     line-height: 2rem;
-    font-size: 1.5rem;
+  }
+
+  .active .grid-heading,
+  .active .contents-heading,
+  .active .list-item__heading {
+    font-size: 2rem;
+    line-height: 3rem;
   }
 
   .active .grid-text,
-  .active .body-text,
   .active .contents-text,
   .active .list-item__text,
-  .project-text,
-  .form-label {
-    font-size: .9rem;
-    line-height: 1.1rem;
+  .project-text {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
-  .list-item,
-  .list-item__label,
-  .list-item__icon {
-    width: 1.3rem;
-    height: 1.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .active .list-item__icon,
+  .active .svg {
+    width: 2rem;
+    height: 2rem;
   }
 
-  .list-item svg {
-    width: 1.1rem;
-    height: 1.1rem;
+  .project:hover .box-label {
+    height: 4rem;
   }
 }
 
-@media (max-width: 310px) {
+@media (orientation: landscape) and (min-width: 1000px) {
 
   .menu__link {
-    font-size: 1rem;
+    font-size: 3rem;
   }
-
-}
-
-@media (max-width: 310px) {
 
   .box-heading {
-    line-height: 2rem;
-    font-size: 1.3rem;
-  }
-
-}
-
-@media (min-width: 400px) {
-
-  .menu__link {
-    font-size: 1.3rem;
-  }
-
-}
-
-@media (min-width: 600px) {
-
-  .menu__link {
     font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .active .grid-heading,
+  .active .contents-heading,
+  .active .list-item__heading {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .active .grid-text,
+  .active .contents-text,
+  .active .list-item__text,
+  .project-text {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .active .list-item__icon,
+  .active .svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .project:hover .box-label {
+    height: 4rem;
   }
   
 }

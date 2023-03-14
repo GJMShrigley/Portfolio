@@ -121,28 +121,21 @@ export default function About() {
             onMouseOut={mouseLeave}
           >
             <div className="box-contents--flex">
-              <div className="box-contents__left">
+              <div className="box-contents__top">
                 <img
                   className="image"
                   alt="A photograph of me"
                   src="./images/self.png"
                 ></img>
                 <div className="text-wrapper">
-                  <div className="sub-heading">Education:</div>
-                  <div className="body-text">BA (Hons) Journalism</div>
-                  <div className="sub-heading">Resume:</div>
-                  <div className="body-text">Click here to download</div>
+                  <div className="contents-heading">Guy Shrigley</div>
+                  <div className="contents-text">
+                    I'm a UK-based front-end developer and content creator.
+                  </div>
                 </div>
               </div>
-              <div className="box-contents__right">
-                <div className="contents-heading">Guy Shrigley</div>
-                <div className="contents-text">
-                  I'm a UK-based front-end developer and content creator.
-                  <br></br>
-                  <br></br>
-                  My passion is integrating creativity with technology to create
-                  impactful and intuitive web sites and apps.
-                </div>
+              <div className="box-contents__bottom">
+              <div className="text-wrapper">
                 <div className="contents-heading">About Me</div>
                 <div className="contents-text">
                   My web development journey began with curiosity. I built
@@ -173,6 +166,7 @@ export default function About() {
                   point where I felt confident I had something to offer and the
                   means to deliver it.
                 </div>
+                </div>
               </div>
             </div>
             <div className="box-label">
@@ -194,13 +188,12 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">HTML</div>
                   </div>
-                    <li className="list-item__text">
-                      Skilled in the use of Semantic markup in building web
-                      pages
-                    </li>
-                    <li className="list-item__text">
-                      Well-versed in BEM methodology conventions
-                    </li>
+                  <li className="list-item__text">
+                    Skilled in the use of Semantic markup in building web pages
+                  </li>
+                  <li className="list-item__text">
+                    Well-versed in BEM methodology conventions
+                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -209,10 +202,10 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">CSS</div>
                   </div>
-                    <li className="list-item__text">
-                      Experienced at Responsive and Mobile-first design to
-                      create dynamic web content across all device types
-                    </li>
+                  <li className="list-item__text">
+                    Experienced at Responsive and Mobile-first design to create
+                    dynamic web content across all device types
+                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -221,19 +214,18 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">JAVASCRIPT</div>
                   </div>
-                    <li className="list-item__text">
-                      Experienced at DOM manipulation using Javascript
-                    </li>
-                    <li className="list-item__text">
-                      Thorough understanding of Scope, Prototypes and
-                      Inheritance, Bubbling and Capturing, Type coercion,
-                      Polymorphism, Encapsulation, and Hoisting
-                    </li>
-                    <li className="list-item__text">
-                      Adept at using Asynchronous methods and Callback
-                      functions, and Destructuring to create clean and efficient
-                      code
-                    </li>
+                  <li className="list-item__text">
+                    Experienced at DOM manipulation using Javascript
+                  </li>
+                  <li className="list-item__text">
+                    Thorough understanding of Scope, Prototypes and Inheritance,
+                    Bubbling and Capturing, Type coercion, Polymorphism,
+                    Encapsulation, and Hoisting
+                  </li>
+                  <li className="list-item__text">
+                    Adept at using Asynchronous methods and Callback functions,
+                    and Destructuring to create clean and efficient code
+                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
