@@ -1,16 +1,18 @@
 import React from "react";
-import IconHtml5 from "./IconHTML5";
-import IconCss3 from "./IconCSS3";
-import IconLogoJavascript from "./IconLogoJavascript";
-import IconReact from "./IconReact";
-import IconBootstrap from "./IconBootstrap";
-import IconGithub from "./IconGithub";
-import IconLanguagePhp from "./IconLanguagePhp";
-import IconJquery from "./IconJquery";
-import IconJson from "./IconJson";
-import IconApi from "./IconApi";
-import IconNodejs from "./IconNodejs";
-import IconNetlify from "./IconNetlify";
+import {
+  IconApi,
+  IconBootstrap,
+  IconCss3,
+  IconGithub,
+  IconHtml5,
+  IconJquery,
+  IconJson,
+  IconLanguagePhp,
+  IconLogoJavascript,
+  IconNetlify,
+  IconNodejs,
+  IconReact,
+} from "./Icons";
 
 export default function About() {
   const refBioElement = React.useRef(null);
@@ -135,37 +137,37 @@ export default function About() {
                 </div>
               </div>
               <div className="box-contents__bottom">
-              <div className="text-wrapper">
-                <div className="contents-heading">About Me</div>
-                <div className="contents-text">
-                  My web development journey began with curiosity. I built
-                  simple websites at first. Pure HTML and CSS. Gradually over
-                  time these simple pages became not so simple. Eventually HTML
-                  and CSS weren't enough for what I wanted to make. I tried my
-                  hand at basic games and then more elaborate applications using
-                  basic Javascript.
-                  <br></br>
-                  <br></br>
-                  What appealed to me the most about web development was how it
-                  changed my perspective. Learning how to code taught me how to
-                  approach problems as a series of puzzles and to solve those
-                  problems methodically and logically, a skill that I could
-                  apply to other parts of life as well.
-                  <br></br>
-                  <br></br>
-                  It wasn't long before I came to the decision to turn my
-                  newfound interest into something more. There was an
-                  opportunity to be had. A chance to take the skills I'd learnt
-                  for fun and apply them to a meaningful career. A chance to
-                  turn passion into purpose.
-                  <br></br>
-                  <br></br>I spent the following year building my knowledge and
-                  honing my skills. It was daunting at first. There was so much
-                  to learn and so many uncertainties. But with stubborn
-                  perseverance and plenty of discipline I was able to reach a
-                  point where I felt confident I had something to offer and the
-                  means to deliver it.
-                </div>
+                <div className="text-wrapper">
+                  <div className="contents-heading">About Me</div>
+                  <div className="contents-text">
+                    My web development journey began with curiosity. I built
+                    simple websites at first. Pure HTML and CSS. Gradually over
+                    time these simple pages became not so simple. Eventually
+                    HTML and CSS weren't enough for what I wanted to make. I
+                    tried my hand at basic games and then more elaborate
+                    applications using basic Javascript.
+                    <br></br>
+                    <br></br>
+                    What appealed to me the most about web development was how
+                    it changed my perspective. Learning how to code taught me
+                    how to approach problems as a series of puzzles and to solve
+                    those problems methodically and logically, a skill that I
+                    could apply to other parts of life as well.
+                    <br></br>
+                    <br></br>
+                    It wasn't long before I came to the decision to turn my
+                    newfound interest into something more. There was an
+                    opportunity to be had. A chance to take the skills I'd
+                    learnt for fun and apply them to a meaningful career. A
+                    chance to turn passion into purpose.
+                    <br></br>
+                    <br></br>I spent the following year building my knowledge
+                    and honing my skills. It was daunting at first. There was so
+                    much to learn and so many uncertainties. But with stubborn
+                    perseverance and plenty of discipline I was able to reach a
+                    point where I felt confident I had something to offer and
+                    the means to deliver it.
+                  </div>
                 </div>
               </div>
             </div>

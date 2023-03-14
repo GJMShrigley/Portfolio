@@ -3,10 +3,9 @@ import Home from "./components/Home";
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import "./App.css";
 
 function App() {
-  let page = <About />
+  let page = <Home />
   const [pageData, setPageData] = React.useState(page)
   
   function clickHandler(e) {
@@ -29,10 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        {pageData}
-      </div>
-      {/* <div className="fogwrapper">
+      <div className="fogwrapper">
         <div id="foglayer_01" className="fog">
           <div className="image01"></div>
           <div className="image02"></div>
@@ -45,7 +41,10 @@ function App() {
           <div className="image01"></div>
           <div className="image02"></div>
         </div>
-      </div> */}
+        </div>
+      <div>
+        {pageData}
+      </div>
       <nav className="menu">
         <a className="menu__home menu__link" onClick={clickHandler}>HOME</a>
         <a className="menu__about menu__link" onClick={clickHandler}>ABOUT</a>
