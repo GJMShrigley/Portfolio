@@ -22,6 +22,9 @@ function App() {
       case "CONTACT":
         page = <Contact />
         break;
+      default:
+        page = <Home />
+        break;
     }
     setPageData(page)
   }
@@ -46,10 +49,10 @@ function App() {
         {pageData}
       </div>
       <nav className="menu">
-        <a className="menu__home menu__link" onClick={clickHandler}>HOME</a>
-        <a className="menu__about menu__link" onClick={clickHandler}>ABOUT</a>
-        <a className="menu__portfolio menu__link" onClick={clickHandler}>PORTFOLIO</a>
-        <a className="menu__contact menu__link" onClick={clickHandler}>CONTACT</a>
+        <div className="menu__home menu__link" onClick={clickHandler}>HOME</div>
+        <div className="menu__about menu__link" onClick={clickHandler}>ABOUT</div>
+        <div className="menu__portfolio menu__link" onClick={clickHandler}>PORTFOLIO</div>
+        <div className="menu__contact menu__link" onClick={clickHandler}>CONTACT</div>
       </nav>
     </div>
   );
