@@ -9,6 +9,7 @@ function App() {
   const [pageData, setPageData] = React.useState(page)
   
   function clickHandler(e) {
+    e.preventDefault()
     switch (e.target.text) {
       case "HOME":
         page = <Home />
@@ -49,10 +50,10 @@ function App() {
         {pageData}
       </div>
       <nav className="menu">
-        <a className="menu__home menu__link" onClick={clickHandler}>HOME</a>
-        <a className="menu__about menu__link" onClick={clickHandler}>ABOUT</a>
-        <a className="menu__portfolio menu__link" onClick={clickHandler}>PORTFOLIO</a>
-        <a className="menu__contact menu__link" onClick={clickHandler}>CONTACT</a>
+        <a className="menu__home menu__link" href="/" onClick={clickHandler}>HOME</a>
+        <a className="menu__about menu__link" href="/" onClick={clickHandler}>ABOUT</a>
+        <a className="menu__portfolio menu__link" href="/" onClick={clickHandler}>PORTFOLIO</a>
+        <a className="menu__contact menu__link" href="/" onClick={clickHandler}>CONTACT</a>
       </nav>
     </div>
   );

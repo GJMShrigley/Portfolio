@@ -59,6 +59,7 @@ body {
   align-items: center;
   font-size: 0.9rem;
   color: #666;
+  text-decoration: none;
 }
 
 .menu__link:hover {
