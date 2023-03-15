@@ -532,6 +532,12 @@ body {
   transition: all 0.2s linear;
 }
 
+.project .box-contents {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .project:hover {
   width: 150%;
   max-width: 50vw;
