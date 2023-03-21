@@ -7,6 +7,8 @@ export default function Contact() {
           className="form"
           method="POST"
           data-netlify="true"
+          netlify 
+          netlify-honeypot="bot-field"
           name="email-form"
         >
           <input type="hidden" name="form-name" value="email-form" />
