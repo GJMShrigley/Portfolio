@@ -17,7 +17,7 @@ function App() {
       case "ABOUT":
         page = <About />
         break;
-      case "PORTFOLIO":
+      case "PROJECTS":
         page = <Portfolio />
         break;
       case "CONTACT":
