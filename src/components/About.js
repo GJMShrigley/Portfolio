@@ -117,7 +117,7 @@ export default function About() {
         </div>
         <div className="element-group">
           <div
-            className="box bio active"
+            className="box bio"
             ref={refBioElement}
             onMouseOver={mouseHover}
             onMouseOut={mouseLeave}
