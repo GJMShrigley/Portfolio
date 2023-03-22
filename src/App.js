@@ -52,7 +52,7 @@ function App() {
       <nav className="menu">
         <a className="menu__home menu__link" href="/" onClick={clickHandler}>HOME</a>
         <a className="menu__about menu__link" href="/" onClick={clickHandler}>ABOUT</a>
-        <a className="menu__portfolio menu__link" href="/" onClick={clickHandler}>PORTFOLIO</a>
+        <a className="menu__portfolio menu__link" href="/" onClick={clickHandler}>PROJECTS</a>
         <a className="menu__contact menu__link" href="/" onClick={clickHandler}>CONTACT</a>
       </nav>
     </div>

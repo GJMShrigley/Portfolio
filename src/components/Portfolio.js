@@ -1,7 +1,7 @@
 export default function Portfolio() {
   return (
     <div className="portfolio-page">
-      <h1 className="page-header">PORTFOLIO</h1>
+      <h1 className="page-header">PROJECTS</h1>
       <div className="container">
       <div className="box project project-1">
           <a className="box-contents" href="https://gs-javasynth.netlify.app/">Link to the JavaSynth project</a>
