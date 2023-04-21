@@ -35,7 +35,7 @@ export default function Portfolio() {
           <a className="box-contents" href="https://gs-landingpage.netlify.app/">Link to the Landing Page project</a>
           <div className="box-label">
             <div className="box-heading">LANDING PAGE</div>
-            <div className="project-text">An HTML, CSS, and Javascript-based landing page</div>
+            <div className="project-text">An HTML, CSS, and Javascript-based landing page mockup</div>
           </div>
         </div>
         <div className="box project project-6">
