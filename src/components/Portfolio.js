@@ -39,10 +39,10 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="box project project-6">
-          <a className="box-contents" href="https://gs-randomuser.netlify.app/">Link to the User List project</a>
+        <div className="box-contents" ></div>
           <div className="box-label">
-            <div className="box-heading">USER LIST</div>
-            <div className="project-text">A React-based profile viewer using the Random User API</div>
+            <div className="box-heading">COMING SOON...</div>
+            <div className="project-text">A React/Redux-based e-commerce store</div>
           </div>
         </div>
       </div>
