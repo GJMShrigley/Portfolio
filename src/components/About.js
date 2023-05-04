@@ -18,40 +18,37 @@ export default function About() {
   const refBioElement = React.useRef(null);
   const refTechnologiesElement = React.useRef(null);
   const refSkillsElement = React.useRef(null);
+  const refPageElement = React.useRef(null);
 
-  function mouseHover(e) {
+  function toggleBox(e) {
     if (refBioElement.current.contains(e.target)) {
       refBioElement.current.classList.add("active");
-      console.log("bio");
+      refSkillsElement.current.classList.remove("active");
+      refTechnologiesElement.current.classList.remove("active");
     } else if (refTechnologiesElement.current.contains(e.target)) {
       refTechnologiesElement.current.classList.add("active");
-      console.log("tech", refTechnologiesElement, e, e.target);
+      refSkillsElement.current.classList.remove("active");
+      refBioElement.current.classList.remove("active");
     } else if (refSkillsElement.current.contains(e.target)) {
       refSkillsElement.current.classList.add("active");
-      console.log("skills");
-    }
-  }
-
-  function mouseLeave(e) {
-    if (refBioElement.current.contains(e.target)) {
-      refBioElement.current.classList.remove("active");
-    } else if (refTechnologiesElement.current.contains(e.target)) {
       refTechnologiesElement.current.classList.remove("active");
-    } else if (refSkillsElement.current.contains(e.target)) {
+      refBioElement.current.classList.remove("active");
+    } else if (refPageElement.current.contains(e.target)) {
       refSkillsElement.current.classList.remove("active");
+      refTechnologiesElement.current.classList.remove("active");
+      refBioElement.current.classList.remove("active");
     }
   }
 
   return (
-    <div className="about-page">
+    <div className="about-page" ref={refPageElement} onClick={toggleBox}>
       <h1 className="page-header">ABOUT</h1>
       <div className="container">
         <div className="element-single">
           <div
             className="box skills"
             ref={refSkillsElement}
-            onMouseOver={mouseHover}
-            onMouseOut={mouseLeave}
+            onClick={toggleBox}
           >
             <div className="box-contents element-grid">
               <div className="grid-item">
@@ -116,12 +113,7 @@ export default function About() {
           </div>
         </div>
         <div className="element-group">
-          <div
-            className="box bio"
-            ref={refBioElement}
-            onMouseOver={mouseHover}
-            onMouseOut={mouseLeave}
-          >
+          <div className="box bio" ref={refBioElement} onClick={toggleBox}>
             <div className="box-contents--flex">
               <div className="box-contents__top">
                 <img
@@ -145,13 +137,13 @@ export default function About() {
                     <br></br>
                     <br></br>
                     I'm a passionate freelancer with experience in responsive
-                    web design. 
+                    web design.
                     <br></br>
                     <br></br>
-                    From creatives showcasing their talents to small
-                    businesses seeking to hook their next customer, I work with
-                    clients from the ground up to develop web pages and content
-                    suited for their needs.
+                    From creatives showcasing their talents to small businesses
+                    seeking to hook their next customer, I work with clients
+                    from the ground up to develop web pages and content suited
+                    for their needs.
                   </div>
                 </div>
               </div>
@@ -163,8 +155,7 @@ export default function About() {
           <div
             className="box tech"
             ref={refTechnologiesElement}
-            onMouseOver={mouseHover}
-            onMouseOut={mouseLeave}
+            onClick={toggleBox}
           >
             <div className="box-contents">
               <div className="box-list">
@@ -175,12 +166,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">HTML</div>
                   </div>
-                  <li className="list-item__text">
-                    Skilled in the use of Semantic markup in building web pages
-                  </li>
-                  <li className="list-item__text">
-                    Well-versed in BEM methodology conventions
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -189,10 +174,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">CSS</div>
                   </div>
-                  <li className="list-item__text">
-                    Experienced at Responsive and Mobile-first design to create
-                    dynamic web content across all device types
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -201,18 +182,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">JAVASCRIPT</div>
                   </div>
-                  <li className="list-item__text">
-                    Experienced at DOM manipulation using Javascript
-                  </li>
-                  <li className="list-item__text">
-                    Thorough understanding of Scope, Prototypes and Inheritance,
-                    Bubbling and Capturing, Type coercion, Polymorphism,
-                    Encapsulation, and Hoisting
-                  </li>
-                  <li className="list-item__text">
-                    Adept at using Asynchronous methods and Callback functions,
-                    and Destructuring to create clean and efficient code
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -221,13 +190,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">REACT</div>
                   </div>
-                  <li className="list-item__text">
-                    Detailed knowledge of Hooks and State management
-                  </li>
-                  <li className="list-item__text">
-                    Hands-on experience with Styled-components, File-loader,
-                    React-router, and Drag-and-drop libraries
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -236,10 +198,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">PHP AND WORDPRESS</div>
                   </div>
-                  <li className="list-item__text">
-                    Familiar with the use of PHP in Wordpress development and
-                    other applications
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -248,10 +206,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">BOOTSTRAP</div>
                   </div>
-                  <li className="list-item__text">
-                    Familiar with the syntax and functionality of the Bootstrap
-                    CSS library
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -260,10 +214,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">JQUERY</div>
                   </div>
-                  <li className="list-item__text">
-                    Familiar with the syntax and functionality of the JQuery
-                    library
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -272,10 +222,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">NODE.JS</div>
                   </div>
-                  <li className="list-item__text">
-                    Well-versed in the use of the Node.JS environment for
-                    building applications
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -284,10 +230,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">JSON</div>
                   </div>
-                  <li className="list-item__text">
-                    Thorough understanding of the JSON format and its uses in
-                    data storage, transmission and manipulation
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -296,10 +238,6 @@ export default function About() {
                     </div>
                     <div className="list-item__heading">RESTFUL APIS</div>
                   </div>
-                  <li className="list-item__text">
-                    Experienced at dealing with RESTful APIs to request data and
-                    generate content from responses
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -310,10 +248,6 @@ export default function About() {
                       GIT VERSION CONTROL
                     </div>
                   </div>
-                  <li className="list-item__text">
-                    Experienced in the use of Git Version Control for managing
-                    project updates and revisions
-                  </li>
                 </ul>
                 <ul className="list-item">
                   <div className="list-item__label">
@@ -324,9 +258,6 @@ export default function About() {
                       HOSTING AND DEPLOYMENT
                     </div>
                   </div>
-                  <li className="list-item__text">
-                    Adept at hosting and deployment using the Netlify platform
-                  </li>
                 </ul>
               </div>
             </div>

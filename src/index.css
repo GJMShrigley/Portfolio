@@ -84,6 +84,7 @@ body {
   align-items: center;
   justify-items: center;
   background-color: #ddd;
+  z-index: 1;
 }
 
 .about-page,
@@ -152,12 +153,6 @@ body {
   background-position: center;
   background-size: cover;
   backdrop-filter: blur(5px);
-}
-
-.skills {
-  width: 100%;
-  height: 40vh;
-  z-index: 2;
 }
 
 .box-contents,
@@ -343,6 +338,12 @@ body {
 
 /* --ABOUT PAGE MODIFIERS-- */
 
+.box:hover {
+  background: rgba(30, 30, 30, 0.9);
+  transition: all 0.2s linear;
+  z-index: 11;
+}
+
 .active .box-label,
 .box:hover .box-label {
   background-color: #c00;
@@ -450,8 +451,7 @@ body {
 }
 
 .active .body-text,
-.active .contents-text,
-.active .list-item__text:nth-of-type(1) {
+.active .contents-text {
   border-top: solid 1px #999;
 }
 
@@ -462,10 +462,12 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .active .list-item {
   margin-bottom: 2vh;
+  border-bottom: solid 1px #999;
   width: 100%;
   height: 100%;
   display: flex;
@@ -480,7 +482,6 @@ body {
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  justify-items: center;
 }
 
 .active .list-item__icon {
@@ -496,24 +497,13 @@ body {
   font-weight: 700;
 }
 
-.active .list-item__text {
-  margin-bottom: 0.5rem;
-  width: 100%;
-  height: 100%;
-  padding-left: 0.5rem;
-  display: list-item;
-  font-size: 1rem;
-  line-height: 1.3rem;
-  list-style: square inside none;
-}
-
 .active .body-text,
 .active .contents-text,
-.active .list-item__text {
+.active .list-item {
   animation: textWidth 0.7s linear forwards, textHeight 2s linear forwards;
 }
 
-.active .list-item__text {
+.active .list-item {
   animation: textWidth 0.7s linear forwards, listHeight 3.2s linear forwards;
 }
 
