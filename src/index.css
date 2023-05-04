@@ -340,6 +340,7 @@ body {
 
 .box:hover {
   background: rgba(30, 30, 30, 0.9);
+  cursor: pointer;
   transition: all 0.2s linear;
   z-index: 11;
 }
