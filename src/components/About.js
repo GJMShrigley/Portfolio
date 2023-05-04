@@ -22,18 +22,28 @@ export default function About() {
 
   function toggleBox(e) {
     if (refBioElement.current.contains(e.target)) {
-      refBioElement.current.classList.add("active");
+      refBioElement.current.classList.toggle("active");
       refSkillsElement.current.classList.remove("active");
       refTechnologiesElement.current.classList.remove("active");
     } else if (refTechnologiesElement.current.contains(e.target)) {
-      refTechnologiesElement.current.classList.add("active");
+      refTechnologiesElement.current.classList.toggle("active");
       refSkillsElement.current.classList.remove("active");
       refBioElement.current.classList.remove("active");
     } else if (refSkillsElement.current.contains(e.target)) {
-      refSkillsElement.current.classList.add("active");
+      refSkillsElement.current.classList.toggle("active");
       refTechnologiesElement.current.classList.remove("active");
       refBioElement.current.classList.remove("active");
-    } else if (refPageElement.current.contains(e.target)) {
+    }
+  }
+
+  function toggleAll(e) {
+    if (
+      refBioElement.current.contains(e.target) ||
+      refTechnologiesElement.current.contains(e.target) ||
+      refSkillsElement.current.contains(e.target)
+    ) {
+      //Do nothing
+    } else {
       refSkillsElement.current.classList.remove("active");
       refTechnologiesElement.current.classList.remove("active");
       refBioElement.current.classList.remove("active");
@@ -41,7 +51,7 @@ export default function About() {
   }
 
   return (
-    <div className="about-page" ref={refPageElement} onClick={toggleBox}>
+    <div className="about-page" ref={refPageElement} onClick={toggleAll}>
       <h1 className="page-header">ABOUT</h1>
       <div className="container">
         <div className="element-single">
