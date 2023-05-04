@@ -5,7 +5,7 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
 function App() {
-  let page = <About />
+  let page = <Home />
   const [pageData, setPageData] = React.useState(page)
   
   function clickHandler(e) {
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div className="fogwrapper">
+      <div className="fogwrapper">
         <div id="foglayer_01" className="fog">
           <div className="image01"></div>
           <div className="image02"></div>
@@ -45,7 +45,7 @@ function App() {
           <div className="image01"></div>
           <div className="image02"></div>
         </div>
-        </div> */}
+        </div>
       <div>
         {pageData}
       </div>
