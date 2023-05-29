@@ -339,10 +339,14 @@ body {
 /* --ABOUT PAGE MODIFIERS-- */
 
 .box:hover {
-  background: rgba(30, 30, 30, 0.9);
   cursor: pointer;
   transition: all 0.2s linear;
   z-index: 11;
+}
+
+.box:hover .box-contents,
+.box:hover .box-contents--flex {
+  background: rgba(30, 30, 30, 0.4);
 }
 
 .active .box-label,
