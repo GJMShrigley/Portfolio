@@ -39,9 +39,9 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="box project project-6">
-        <div className="box-contents" ></div>
+        <a className="box-contents" href="https://gs-storefront.netlify.app/">Link to the storefront project</a>
           <div className="box-label">
-            <div className="box-heading">COMING SOON...</div>
+            <div className="box-heading">STOREFRONT</div>
             <div className="project-text">A React/Redux-based e-commerce store</div>
           </div>
         </div>
