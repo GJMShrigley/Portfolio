@@ -17,10 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #ddd;
-}
-
 ::-webkit-scrollbar {
   width: 0.7rem;
   background-color: rgba(100, 100, 100, 0.5);
@@ -220,6 +216,10 @@ body {
 /* FRONT-PAGE END */
 
 /* ABOUT-PAGE START */
+
+.skills {
+  height: 100%;
+}
 
 .bio {
   width: 95%;
