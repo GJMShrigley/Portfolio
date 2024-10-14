@@ -18,31 +18,31 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="box project project-3">
-          <a className="box-contents" href="https://gs-todo.netlify.app/">Link to the To-Do App project</a>
-          <div className="box-label">
-            <div className="box-heading">TO-DO APP</div>
-            <div className="project-text">A React-based drag and drop list</div>
-          </div>
-        </div>
-        <div className="box project project-4">
           <a className="box-contents" href="https://gs-spotifyplayer.netlify.app/">Link to the Spotify Player project</a>
           <div className="box-label">
             <div className="box-heading">SPOTIFY PLAYER</div>
             <div className="project-text"> A React-based Spotify player with built-in search</div>
           </div>
         </div>
-        <div className="box project project-5">
+        <div className="box project project-4">
           <a className="box-contents" href="https://gs-landingpage.netlify.app/">Link to the Landing Page project</a>
           <div className="box-label">
             <div className="box-heading">LANDING PAGE</div>
             <div className="project-text">An HTML, CSS, and Javascript-based landing page mockup</div>
           </div>
         </div>
-        <div className="box project project-6">
+        <div className="box project project-5">
         <a className="box-contents" href="https://gs-storefront.netlify.app/">Link to the storefront project</a>
           <div className="box-label">
             <div className="box-heading">STOREFRONT</div>
             <div className="project-text">A React/Redux-based e-commerce store</div>
+          </div>
+        </div>
+        <div className="box project project-6">
+          <a className="box-contents" href="https://gs-metrics.netlify.app/">Link to the Metrix App project</a>
+          <div className="box-label">
+            <div className="box-heading">METRIX</div>
+            <div className="project-text">An Ionic/Capacitor/React-based data-tracking app for the Android platform</div>
           </div>
         </div>
       </div>
